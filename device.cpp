@@ -22,22 +22,27 @@ void Device::triggerEvent(Event event)
     switch (event) {
         case Event::InterfaceNOk: {
                 currentState->interfaceNOk();
+                break;
             }
 
         case Event::InterfaceOk: {
                 currentState->interfaceOk();
+                break;
             }
 
         case Event::PacoteNOk: {
                 currentState->pacoteNOk();
+                break;
             }
 
         case Event::PacoteOk: {
                 currentState->pacoteOk();
+                break;
             }
 
         case Event::semResposta: {
                 currentState->semResposta();
+                break;
             }
     }
 }

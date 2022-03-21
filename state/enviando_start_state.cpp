@@ -1,4 +1,5 @@
 #include "enviando_start_state.h"
+#include "link_ok_state.h"
 #include "start_recebido_state.h"
 #include <iostream>
 
@@ -18,7 +19,7 @@ void EnviandoStartState::interfaceNOk()
 
 void EnviandoStartState::pacoteOk()
 {
-    parent->setState(new StartRecebidoState(parent));
+    parent->setState(new LinkOkState(parent));
 }
 
 void EnviandoStartState::pacoteNOk()
